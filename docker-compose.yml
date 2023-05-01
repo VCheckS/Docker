@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_DB: app
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: 9mREsvXDs9Gk89Ef
+
+    ports:
+      - "5000:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data
